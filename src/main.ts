@@ -29,7 +29,7 @@ app.get('/scrape', async (req, res) => {
 
     await crawler.run([targetUrl]);
 
-    res.json({ data: results });
+    return res.json({ data: results });
 });
 
 const PORT = process.env.PORT || 3000;
